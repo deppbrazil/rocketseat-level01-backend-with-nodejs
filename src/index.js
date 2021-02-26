@@ -4,23 +4,6 @@ const app = express();
 
 app.use(express.json());
 
-/**
- * Métodos HTTP:
- *
- * GET: Buscar infomações do back-end
- * POST: Criar uma informação no back-end
- * PUT/PATCH: Alterar uma informação no back-end
- * DELETE: Deletar uma informação no back-end
- */
-
-/**
- * Tipos de parâmetros
- *
- * Query Params: Filtros e paginação
- * Route Params: Identificar recursos (Atualizar/Deletar)
- * Request Body: Conteúdo na hora de criar ou editar um recurso (JSON)
- */
-
 app.get('/projects', (request, response) => {
   const { title, owner } = request.query;
 
